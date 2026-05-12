@@ -27,7 +27,7 @@ function iniciarTemporizador() {
     let tiempo = tiempos[tipoHuevo];
 
     if (puntoInicio === 'fria') {
-        tiempo += 3;
+        tiempo += 5;
     }
 
     restante = tiempo * 60;
