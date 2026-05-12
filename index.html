@@ -3,11 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Egg Timer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Egg Timer 🥚</h1>
+        
+        <div class="config">
+            <section>
+                <h3>Water Temperature</h3>
+                <label><input type="radio" name="inicio" value="fria" checked> Cold</label>
+                <label><input type="radio" name="inicio" value="hirviendo"> Boiling</label>
+            </section>
+
+            <section>
+                <h3>Egg cooking point</h3>
+                <select id="tipoHuevo">
+                    <option value="liquido">Soft Boiled (Liquid)</option>
+                    <option value="cremoso">Medium Boiled</option>
+                    <option value="duro">Hard Boiled</option>
+                </select>
+            </section>
+        </div>
+
+        <div class="timer-display">
+            <span id="minutos">00</span>:<span id="segundos">00</span>
+        </div>
+
+        <div class="controls">
+            <button id="iniciar" class="btn-primary">Start</button>
+            <button id="reiniciar" class="btn-secondary">Stop</button>
+        </div>
+
+        <div id="message-container" class="msg-hidden"></div>
+        <audio id="alarma" src="assets/alarm.mp3"></audio>
+        <audio id="fondo" src="assets/sound.mp3" loop></audio>
+
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

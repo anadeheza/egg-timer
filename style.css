@@ -1,0 +1,83 @@
+:root {
+    --yema: #FFB100;
+    --clara: #F9F9F9;
+    --texto: #2D3436;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 2rem;
+    border: 3px solid #dbdbdb;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 320px;
+    height: 450px;
+}
+
+h1 { color: var(---texto); font-size: 1.5rem; }
+
+.config {
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.timer-display {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--yema);
+    margin: 20px 0;
+    font-variant-numeric: tabular-nums;
+}
+
+.controls button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary { background-color: var(--yema); color: white; margin-right: 10px; }
+.btn-primary:hover { background-color: #e69f00; }
+
+.btn-secondary { background-color: #dfe6e9; color: var(--texto); }
+
+.msg-hidden {
+    display: none;
+}
+
+.msg-visible { 
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    border-radius: 8px;
+    font-weight: bold;
+    animation: aparecer 0.5s ease-out;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
