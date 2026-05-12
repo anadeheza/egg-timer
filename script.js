@@ -36,7 +36,6 @@ function iniciarTemporizador() {
     clearInterval(intervalo);
 
     mensaje.className = "msg-hidden"
-    mensaje.textContent = ""
     alarma.pause()
     alarma.currentTime = 0 
 
@@ -55,12 +54,12 @@ function iniciarTemporizador() {
 function finalizar() {
     clearInterval(intervalo)
     
-    mensaje.textContent = "Saca tus huevos!"
     mensaje.className = "msg-visible"
 
     fondo.pause()
 
     vueltas = 0 
+    iniciar.textContent = "Start"
     reproducirFin()
 }
 
@@ -86,5 +85,6 @@ document.getElementById('reiniciar').addEventListener('click', () => {
     mensaje.className = "msg-hidden"
     alarma.pause()
     fondo.pause()
+    iniciar.textContent = "Start"
     alarma.currentTime = 0 
 });

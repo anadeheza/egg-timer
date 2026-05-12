@@ -7,8 +7,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="message-container" class="msg-hidden">
+        <p>Your eggs are cooked!</p>
+        <p>Take them out and cool them down ;)</p>
+    </div>
+
     <div class="container">
-        <h1>Egg Timer 🥚</h1>
+        <h1>Egg Timer</h1>
         
         <div class="config">
             <section>
@@ -27,19 +32,57 @@
             </section>
         </div>
 
-        <div class="timer-display">
-            <span id="minutos">00</span>:<span id="segundos">00</span>
+        <div class="yolk">
+            <div class="timer-display">
+                <span id="minutos">00</span>:<span id="segundos">00</span>
+            </div>
+
+            <div class="controls">
+                <button id="iniciar" class="btn-primary">Start</button>
+                <button id="reiniciar" class="btn-secondary">Stop</button>
+            </div>
         </div>
 
-        <div class="controls">
-            <button id="iniciar" class="btn-primary">Start</button>
-            <button id="reiniciar" class="btn-secondary">Stop</button>
-        </div>
 
-        <div id="message-container" class="msg-hidden"></div>
         <audio id="alarma" src="assets/alarm.mp3"></audio>
         <audio id="fondo" src="assets/sound.mp3" loop></audio>
+    </div>
+        
+    <div class="egg-info">
+        <h1>How to cook the perfect eggs</h1>
+        <div class="information">
+            <h3 class="type">Soft Boiled (6-7 minutes)</h3>
+            <div class="info">
+                <p><b>Runny yolk:</b> The yolk stays liquid and golden while the whites are just set</p>
+                <p><b>Perfect for:</b> dipping, spreading and salads, the liquid yolk adds exquisite taste and texture</p>
+            </div>
 
+            <h3 class="type">Medium Boiled (8-9 minutes)</h3>
+            <div class="info">
+                <p><b>Jammy yolk:</b> The yolk is partially set but still soft and creamy while the whites are firm</p>
+                <p><b>Perfect for:</b> honestly everything, it is the most versatile style</p>
+            </div>
+
+            <h3 class="type">Hard Boiled (10 minutes)</h3>
+            <div class="info">
+                <p><b>Firm yolk:</b> The yolk is solid with a paler yellow color and the whites are fully firm</p>
+                <p><b>Perfect for:</b> deviled eggs, egg sandwiches, as a snack (easy to transport and eat without getting dirty)</p>
+            </div>
+
+            <h3 class="avoid">Avoid</h3>
+            <div class="info">
+                <p><b>+10 minutes:</b> The eggs are <b>overcooked</b>, with a rubbery, dry, grayer yolk</p>
+                <p class="imp">Eggs lose some nutrients when overcooked!</p>
+                <p><b>-4 minutes:</b> The eggs are <b>undercooked</b>, this will upset your stomach and you could get salmonella (depending on where you bought the egg)</p>
+            </div>
+
+            <h3>Tips</h3>
+            <div class="info">
+                <p>Cool your eggs for 5 minutes right after boiling to stop the cooking (they'll be easier to peel too!)</p>
+                <p><b>Cooler eggs:</b> If you keep your eggs on the fridge (reccommended but not in the door), you ought to add 1-2 minutes to the boiling, depending on how cold they where</p>
+                <p><b>Egg size:</b> You may have to add or take 1-2 minutes from boiling depending on the size of your egg</p>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
